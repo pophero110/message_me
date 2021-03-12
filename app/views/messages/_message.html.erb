@@ -2,7 +2,12 @@
     <div class="event">
         <div class="content">
             <div class="summary">
+            <% if message.class != String %>
                 <em><%= message.user.username %></em>: <%= message.body %>
+            <% else %>
+                <em>Bot: </em><%= message %>
+            <% end %>
+                
             </div>
         </div>
     </div> 
