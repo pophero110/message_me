@@ -14,12 +14,12 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+#   test:
 
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby-version: ['2.7.1']
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         ruby-version: ['2.7.1']
 
     steps:
     - uses: actions/checkout@v2
