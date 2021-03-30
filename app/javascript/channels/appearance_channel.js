@@ -12,7 +12,6 @@ consumer.subscriptions.create("AppearanceChannel", {
   received(data) {
     // Called when there's incoming data on the websocket for this channel
     let userId = "#" + data.user.id;
-    // $(userId).toggleClass("green");
     if (data.user.online) {
       $(userId).addClass("green");
     } else {

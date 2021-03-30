@@ -9,8 +9,6 @@ class AppearanceChannel < ApplicationCable::Channel
   end
 
   def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
-
     if current_user
       ActionCable.server.broadcast "appearance_channel", { user: { id: current_user.id, online: false } }
       current_user.online = false
