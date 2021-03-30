@@ -26,19 +26,17 @@
         <div class="four wide column">
             <div class="ui fluid raised card chatbox">
                 <div class="content">      
-                    <div class="ui secondary vertical menu">
+                    <div class="ui secondary vertical menu" id="user-list">
                         <a class="active item">
                         Users <div class="ui label">1</div>
                         </a>
-                        <a class="item">
-                            Jeff
-                        </a>
-                        <a class="item">
-                            Jeff
-                        </a>
-                        <a class="item">
-                            Jeff
-                        </a>
+                       <% @users.each do |user| %>
+                            <a class="item" >
+                                <div id=<%= user.id %> class="ui small header <%= "green" if user.online %>">
+                                    <%= user.username %>
+                                </div>
+                            </a>
+                       <% end %>
                     </div>
                 </div>
             </div>
