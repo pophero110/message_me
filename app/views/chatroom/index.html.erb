@@ -28,7 +28,7 @@
                 <div class="content">      
                     <div class="ui secondary vertical menu" id="user-list">
                         <a class="active item">
-                        Users <div class="ui label">1</div>
+                        Users <div class="ui label"><%= @users.count %></div>
                         </a>
                        <% @users.each do |user| %>
                             <a class="item" >
